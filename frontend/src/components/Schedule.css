@@ -1,0 +1,195 @@
+/* Schedule CSS - Academic Light Theme Vertical Timeline */
+
+.sched-section {
+  position: relative;
+  background-color: #f8fafc; /* Light secondary background */
+  padding: 80px 24px;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sched-container {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.sched-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sched-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #e65f2b; /* Academic Orange */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sched-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f2d59; /* Academic Deep Blue */
+}
+
+.sched-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #0f2d59, #e65f2b);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(15, 45, 89, 0.2);
+}
+
+/* Vertical Timeline Structure */
+.sched-timeline {
+  position: relative;
+  padding-left: 40px;
+  margin: 0;
+}
+
+/* Connecting Timeline Line */
+.sched-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 19px;
+  width: 2px;
+  background: linear-gradient(to bottom, #0f2d59, #e65f2b);
+  box-shadow: none;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Badge (Outer dot) */
+.timeline-badge-outer {
+  position: absolute;
+  left: -40px;
+  top: 6px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.timeline-badge {
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border: 3px solid #0f2d59;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(15, 45, 89, 0.1);
+  transition: all 0.2s ease;
+}
+
+.timeline-item:hover .timeline-badge {
+  background-color: #e65f2b;
+  border-color: #e65f2b;
+  box-shadow: 0 0 10px rgba(230, 95, 43, 0.4);
+  transform: scale(1.2);
+}
+
+/* Panel Card */
+.timeline-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 24px 32px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.timeline-panel:hover {
+  transform: translateX(6px);
+  border-color: #e65f2b;
+  box-shadow: 0 10px 25px rgba(15, 45, 89, 0.04);
+}
+
+.timeline-date {
+  font-size: 13px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #e65f2b; /* Academic Orange */
+  margin-bottom: 6px;
+}
+
+.timeline-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f2d59;
+  margin-bottom: 6px;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sched-section {
+    padding: 60px 16px;
+  }
+
+  .sched-header {
+    margin-bottom: 40px;
+  }
+
+  .sched-title {
+    font-size: 26px;
+  }
+
+  .sched-timeline {
+    padding-left: 30px;
+  }
+
+  .sched-timeline::before {
+    left: 9px;
+  }
+
+  .timeline-badge-outer {
+    left: -30px;
+    width: 20px;
+  }
+
+  .timeline-badge {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+
+  .timeline-panel {
+    padding: 16px 20px;
+    border-radius: 16px;
+  }
+
+  .timeline-title {
+    font-size: 16px;
+  }
+
+  .timeline-desc {
+    font-size: 13px;
+  }
+}

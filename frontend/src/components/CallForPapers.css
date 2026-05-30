@@ -1,0 +1,300 @@
+/* CallForPapers CSS - Clean Academic Light Theme */
+
+.cfp-page {
+  position: relative;
+  background-color: #ffffff; /* Clean White */
+  padding: 140px 24px 100px 24px; /* extra top padding for fixed navbar spacing */
+  color: #1e293b; /* slate-800 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+}
+
+.cfp-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.cfp-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.cfp-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #e65f2b; /* Academic Orange */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cfp-title {
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f2d59; /* Academic Deep Blue */
+}
+
+.cfp-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #0f2d59, #e65f2b);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(15, 45, 89, 0.2);
+}
+
+/* Two Column Grid */
+.cfp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+/* Card Styling */
+.cfp-card {
+  background: #f8fafc; /* Slate 50 background */
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(15, 45, 89, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.cfp-card-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f2d59;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+  border-left: 4px solid #e65f2b; /* Orange highlight strip */
+  padding-left: 12px;
+}
+
+.cfp-card-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569; /* slate-600 */
+  margin-bottom: 24px;
+}
+
+/* Topics list */
+.cfp-topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cfp-topic-item {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #334155; /* slate-700 */
+  display: flex;
+  gap: 12px;
+}
+
+.cfp-bullet {
+  color: #e65f2b; /* Orange bullet points */
+  font-weight: bold;
+}
+
+/* Guidelines */
+.guideline-block {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 32px;
+}
+
+.guideline-block p {
+  margin-bottom: 16px;
+}
+
+.guideline-block ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Resources & Downloads */
+.cfp-download-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.cfp-download-btn {
+  display: block;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f2d59;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.cfp-download-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #0f2d59;
+  color: #e65f2b;
+}
+
+/* Submission Box */
+.cfp-submit-box {
+  background: #f0f7ff; /* Very soft light academic blue tint */
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.cfp-submit-box h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f2d59;
+  margin-bottom: 8px;
+}
+
+.cfp-submit-box p {
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.cfp-submit-btn {
+  display: inline-block;
+  background-color: #e65f2b; /* Orange CTA action button */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 28px;
+  border-radius: 100px;
+  box-shadow: 0 4px 12px rgba(230, 95, 43, 0.2);
+  transition: all 0.2s ease;
+}
+
+.cfp-submit-btn:hover {
+  background-color: #d94f1c;
+  box-shadow: 0 4px 18px rgba(230, 95, 43, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Publication Card */
+.publication-card {
+  margin-top: 16px;
+}
+
+.publication-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 24px;
+}
+
+.previous-editions {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.prev-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f2d59;
+  margin-bottom: 12px;
+}
+
+.prev-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prev-list li {
+  font-size: 13px;
+  color: #475569;
+}
+
+.prev-list a {
+  color: #e65f2b; /* Orange links */
+  text-decoration: none;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.prev-list a:hover {
+  text-decoration: underline;
+  color: #0f2d59;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .cfp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cfp-page {
+    padding: 100px 16px 60px 16px;
+  }
+
+  .cfp-header {
+    margin-bottom: 32px;
+  }
+
+  .cfp-title {
+    font-size: 28px;
+  }
+
+  .cfp-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .cfp-card-title {
+    font-size: 18px;
+  }
+
+  .cfp-topic-item {
+    font-size: 13px;
+  }
+
+  .guideline-block {
+    font-size: 13px;
+  }
+
+  .cfp-download-btn {
+    padding: 12px 16px;
+  }
+}

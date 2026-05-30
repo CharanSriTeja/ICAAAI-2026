@@ -1,0 +1,415 @@
+/* Conference CSS - Academic Light Theme Grid and Modals */
+
+.conf-section {
+  position: relative;
+  background-color: #ffffff; /* White background */
+  padding: 80px 24px;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+}
+
+.conf-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.conf-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.conf-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #e65f2b; /* Academic Orange */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.conf-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f2d59; /* Academic Deep Blue */
+}
+
+.conf-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #0f2d59, #e65f2b);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(15, 45, 89, 0.2);
+}
+
+/* Subsection styling */
+.conf-subsection {
+  margin-bottom: 64px;
+}
+
+.conf-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.conf-subsection-title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #0f2d59;
+  margin-bottom: 28px;
+  border-left: 4px solid #e65f2b; /* Academic Orange */
+  padding-left: 14px;
+}
+
+/* Speaker Grid */
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* Card Styling */
+.speaker-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+}
+
+.speaker-card:hover {
+  transform: translateY(-6px);
+  border-color: #e65f2b;
+  box-shadow: 0 12px 24px rgba(15, 45, 89, 0.06);
+}
+
+.speaker-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 110%; /* 11:10 aspect ratio */
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+.speaker-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.speaker-card:hover .speaker-image {
+  transform: scale(1.03);
+}
+
+.speaker-avatar-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker-avatar-fallback span {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f2d59;
+  letter-spacing: 0.05em;
+}
+
+.speaker-card-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 45, 89, 0.3); /* Transparent blue overlay */
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease;
+}
+
+.speaker-card:hover .speaker-card-overlay {
+  opacity: 1;
+}
+
+.speaker-view-btn {
+  background-color: #e65f2b; /* Academic Orange */
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(230, 95, 43, 0.3);
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+.speaker-card:hover .speaker-view-btn {
+  transform: translateY(0);
+}
+
+.speaker-info {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f2d59;
+  margin-bottom: 6px;
+}
+
+.speaker-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e65f2b; /* Academic Orange */
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.speaker-inst {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b; /* slate-500 */
+  line-height: 1.4;
+  margin-top: auto;
+}
+
+/* Modal Popup Styling */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(15, 23, 42, 0.4); /* slate-900 transparent */
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-content {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 25px 50px rgba(15, 45, 89, 0.1);
+  overflow: hidden;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(15, 45, 89, 0.05);
+  border: 1px solid rgba(15, 45, 89, 0.08);
+  color: #0f2d59;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background-color: #ef4444; /* red-500 */
+  border-color: #ef4444;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+.modal-image-col {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  background-color: #f8fafc;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-avatar-fallback {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-avatar-fallback span {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0f2d59;
+  letter-spacing: 0.05em;
+}
+
+.modal-info-col {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-tag {
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #e65f2b;
+  background-color: rgba(230, 95, 43, 0.08);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.modal-name {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f2d59;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.modal-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e65f2b;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.modal-inst {
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.modal-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.modal-bio {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+  text-align: justify;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .conf-section {
+    padding: 60px 16px;
+  }
+
+  .conf-header {
+    margin-bottom: 40px;
+  }
+
+  .conf-title {
+    font-size: 26px;
+  }
+
+  .conf-subsection-title {
+    font-size: 17px;
+  }
+
+  .speaker-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .modal-backdrop {
+    padding: 16px;
+  }
+
+  .modal-content {
+    max-width: 480px;
+    border-radius: 20px;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-image-col {
+    height: 260px;
+    min-height: auto;
+  }
+
+  .modal-info-col {
+    padding: 24px;
+  }
+
+  .modal-name {
+    font-size: 20px;
+  }
+}

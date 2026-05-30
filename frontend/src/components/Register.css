@@ -1,0 +1,394 @@
+/* Register CSS - Clean Academic Light Theme */
+
+.reg-page {
+  position: relative;
+  background-color: #ffffff; /* Clean White */
+  padding: 140px 24px 100px 24px; /* extra top padding for fixed navbar spacing */
+  color: #1e293b; /* slate-800 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+}
+
+.reg-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.reg-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.reg-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #e65f2b; /* Academic Orange */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.reg-title {
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f2d59; /* Academic Deep Blue */
+}
+
+.reg-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #0f2d59, #e65f2b);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(15, 45, 89, 0.2);
+}
+
+/* Info Grid Layout (Table and Bank side-by-side) */
+.reg-info-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: stretch;
+}
+
+/* Cards */
+.reg-card {
+  background: #f8fafc; /* Slate 50 background */
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(15, 45, 89, 0.03);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.reg-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f2d59;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-left: 4px solid #e65f2b; /* Orange border indicator */
+  padding-left: 12px;
+}
+
+/* Table Styling */
+.reg-fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  text-align: left;
+}
+
+.reg-fees-table th, .reg-fees-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.reg-fees-table th {
+  font-weight: 700;
+  color: #0f2d59; /* Academic Deep Blue */
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  background-color: #f1f5f9; /* Light Slate Row */
+}
+
+.reg-fees-table td {
+  color: #334155; /* slate-700 */
+  line-height: 1.5;
+}
+
+.reg-fees-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reg-fees-table strong {
+  color: #0f2d59;
+}
+
+/* Bank Details Styling */
+.bank-info-note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569; /* slate-600 */
+  margin-bottom: 24px;
+}
+
+.bank-details-box {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bank-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 12px;
+}
+
+.bank-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.bank-row .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748b; /* slate-500 */
+  font-weight: 700;
+}
+
+.bank-row .value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b; /* slate-800 */
+  text-align: right;
+}
+
+.bank-row .value.highlighting {
+  color: #e65f2b; /* Highlight crucial info in orange */
+  font-weight: 700;
+}
+
+/* Form Container Card */
+.form-card {
+  width: 100%;
+}
+
+.form-title-align {
+  margin-bottom: 32px;
+}
+
+.registration-form {
+  width: 100%;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.double-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569; /* slate-600 */
+  letter-spacing: 0.02em;
+}
+
+/* Inputs styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #1e293b;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8; /* slate-400 */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0f2d59; /* Academic Blue focus border */
+  background-color: rgba(15, 45, 89, 0.01);
+  box-shadow: 0 0 12px rgba(15, 45, 89, 0.1);
+}
+
+/* File Input field styling */
+.file-input-field {
+  color: #475569;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+.file-input-field::-webkit-file-upload-button {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f2d59;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: all 0.2s ease;
+}
+
+.file-input-field::-webkit-file-upload-button:hover {
+  background-color: #0f2d59;
+  color: #ffffff;
+  border-color: #0f2d59;
+}
+
+/* Form Submit Button Alignment */
+.form-submit-align {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reg-submit-button {
+  background-color: #e65f2b; /* Orange Action button */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px 36px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(230, 95, 43, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reg-submit-button:hover {
+  background-color: #d94f1c;
+  box-shadow: 0 4px 18px rgba(230, 95, 43, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Success Message layout */
+.reg-success-message {
+  text-align: center;
+  padding: 24px;
+  background-color: #f0fdf4; /* Soft Green */
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  font-size: 24px;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+.success-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #166534; /* dark green */
+  margin-bottom: 12px;
+}
+
+.success-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+}
+
+.reg-reset-btn {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #0f2d59;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reg-reset-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #0f2d59;
+  color: #e65f2b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .reg-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .reg-page {
+    padding: 100px 16px 60px 16px;
+  }
+
+  .reg-header {
+    margin-bottom: 32px;
+  }
+
+  .reg-title {
+    font-size: 28px;
+  }
+
+  .reg-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .reg-fees-table th, .reg-fees-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-group.double-width {
+    grid-column: span 1;
+  }
+
+  .form-submit-align {
+    justify-content: center;
+  }
+
+  .reg-submit-button {
+    width: 100%;
+  }
+}

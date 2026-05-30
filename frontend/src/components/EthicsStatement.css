@@ -1,0 +1,179 @@
+/* EthicsStatement CSS - Clean Academic White Theme */
+
+.ethics-section {
+  position: relative;
+  background-color: #ffffff; /* White background */
+  padding: 80px 24px;
+  color: #1e293b; /* slate-800 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+}
+
+.ethics-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.ethics-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.ethics-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #e65f2b; /* Academic Orange */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ethics-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f2d59; /* Academic Deep Blue */
+}
+
+.ethics-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #0f2d59, #e65f2b);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(15, 45, 89, 0.2);
+}
+
+/* Card Styling */
+.ethics-content-card {
+  background: #f8fafc; /* light-gray secondary */
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 10px 30px rgba(15, 45, 89, 0.03);
+}
+
+.ethics-block {
+  margin-bottom: 32px;
+}
+
+.ethics-block:last-of-type {
+  margin-bottom: 40px;
+}
+
+.ethics-subtitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f2d59;
+  margin-bottom: 12px;
+  border-left: 4px solid #e65f2b;
+  padding-left: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.ethics-paragraph {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155; /* slate-700 */
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+.ethics-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Two Column Grid */
+.ethics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.ethics-list-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+}
+
+.ethics-list-title {
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0f2d59;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.ethics-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ethics-bullet-list li {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #475569; /* slate-600 */
+  position: relative;
+  padding-left: 20px;
+  text-align: justify;
+}
+
+.ethics-bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e65f2b;
+  font-weight: bold;
+  font-size: 16px;
+  top: -1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .ethics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ethics-section {
+    padding: 60px 16px;
+  }
+
+  .ethics-title {
+    font-size: 26px;
+  }
+
+  .ethics-content-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .ethics-subtitle {
+    font-size: 18px;
+  }
+
+  .ethics-paragraph {
+    font-size: 14px;
+  }
+
+  .ethics-list-box {
+    padding: 20px;
+  }
+}

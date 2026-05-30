@@ -1,0 +1,195 @@
+/* Sponsors CSS - Academic Light Theme Grid Layouts */
+
+.sponsors-section {
+  position: relative;
+  background-color: #f8fafc; /* Light secondary background */
+  padding: 80px 24px;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sponsors-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.sponsors-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.sponsors-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #e65f2b; /* Academic Orange */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sponsors-title {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f2d59; /* Academic Deep Blue */
+}
+
+.sponsors-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #0f2d59, #e65f2b);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(15, 45, 89, 0.2);
+}
+
+/* Card Container layout */
+.sponsors-card-container {
+  background: #ffffff; /* White background */
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+}
+
+.sponsors-card-container:last-child {
+  margin-bottom: 0;
+}
+
+.sponsors-subsection-title {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #0f2d59;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* Sponsors Grid */
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Publication Partner grid */
+.partner-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sponsor item */
+.sponsor-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc; /* Light gray background */
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 240px;
+  height: 120px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.sponsor-item:hover {
+  transform: scale(1.03);
+  border-color: #e65f2b;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 45, 89, 0.04);
+}
+
+.sponsor-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(60%);
+  transition: all 0.25s ease;
+}
+
+.sponsor-item:hover .sponsor-logo-img {
+  filter: grayscale(0%) opacity(100%);
+}
+
+/* Fallback card styling */
+.sponsor-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.sponsor-fallback span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sponsors-section {
+    padding: 60px 16px;
+  }
+
+  .sponsors-header {
+    margin-bottom: 40px;
+  }
+
+  .sponsors-title {
+    font-size: 26px;
+  }
+
+  .sponsors-card-container {
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .sponsor-item {
+    height: 100px;
+    padding: 12px;
+  }
+
+  .sponsor-fallback span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sponsor-item {
+    max-width: 100%;
+  }
+}
